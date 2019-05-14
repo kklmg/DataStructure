@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="DS">
+      <UniqueIdentifier>{f2ba3c01-ff58-463b-a1fe-2ccb597adf6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS\List">
+      <UniqueIdentifier>{4958a683-934b-4dde-b2bb-66010ca780a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS\Tree">
+      <UniqueIdentifier>{03d4a2ca-e9b4-4403-ac8c-94930c74922c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS\Hash">
+      <UniqueIdentifier>{38a48ac2-b09c-4885-ad12-c2d2070e6631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS\Graph">
+      <UniqueIdentifier>{db438181-8ff1-4b03-860f-66c5f03791e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS\queue">
+      <UniqueIdentifier>{7426cc3e-5f29-47ad-a6d5-687278bd111e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DS\stack">
+      <UniqueIdentifier>{83c91d44-031d-4952-a718-03b28c680662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{1061e1c6-218c-4eac-9bd2-d7bf9b189a66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyNode.h">
+      <Filter>DS</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkList.h">
+      <Filter>DS\List</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>DS\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>DS\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>DS\Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>DS\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="queue.h">
+      <Filter>DS\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>DS\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Search.h">
+      <Filter>DS\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkList.cpp">
+      <Filter>DS\List</Filter>
+    </ClCompile>
+    <ClCompile Include="HashTable.cpp">
+      <Filter>DS\Hash</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+</Project>
