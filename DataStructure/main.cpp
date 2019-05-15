@@ -23,6 +23,8 @@
 #include"LinkList.h"
 #include"HashTable.h"
 #include"Graph.h"
+#include"Trie.h"
+
 
 //template<typename T>
 using namespace std;
@@ -62,126 +64,31 @@ struct point
 
 const int TRIESIZE = 26;
 
-class Trie
-{
-	class TrieNode
-	{
-	public:
-		TrieNode() :term(0)
-		{
-			memset(children, 0, sizeof(children));
-		}
-		~TrieNode()
-		{
-			for (int i = 0; i < TRIESIZE; ++i)
-			{
-				if (children[i] != nullptr)
-				{
-					delete children[i];
-					children[i] = nullptr;
-				}
-			}
-		}
-		bool term;
-		TrieNode* children[TRIESIZE];
-	};
 
-
-public:
-	/** Initialize your data structure here. */
-	Trie()
-	{
-		m_pRoot = new TrieNode;
-	}
-
-	/** Inserts a word into the trie. */
-	void insert(string word)
-	{
-		int index;
-		TrieNode* pCurNode = m_pRoot;
-
-		for (int i = 0; word[i]; i++)
-		{
-			index = word[i] - 'a';
-
-			//case: out of range
-			if (index < 0 || index > TRIESIZE)
-				return;
-
-			//case: not exist
-			if (!pCurNode->children[index])
-				pCurNode->children[index] = new TrieNode();
-
-			//next
-			pCurNode = pCurNode->children[index];
-		}
-
-		//case: char exist  
-		if (!pCurNode->term)
-			pCurNode->term = true;
-	}
-
-	/** Returns if the word is in the trie. */
-	bool search(string word)
-	{
-		int index;
-		TrieNode* pCurNode = m_pRoot;
-
-		for (int i = 0; word[i]; i++)
-		{
-			index = word[i] - 'a';
-			//case: out of max range
-			if (index < 0 || index > TRIESIZE)
-				return false;
-			//case: char not exist
-			if (!pCurNode->children[index])
-				return false;
-			//next
-			pCurNode = pCurNode->children[index];
-		}
-
-		//case: char exist  
-		if (pCurNode->term)
-			return true;
-		else
-			return false;
-	}
-
-	/** Returns if there is any word in the trie that starts with the given prefix. */
-	bool startsWith(string prefix)
-	{
-		int index;
-		TrieNode* pCurNode = m_pRoot;
-
-		for (int i = 0; prefix[i]; i++)
-		{
-			index = prefix[i] - 'a';
-			//case: out of max range
-			if (index < 0 || index > TRIESIZE)
-				return false;
-			//case: char not exist
-			if (!pCurNode->children[index])
-				return false;
-			//next
-			pCurNode = pCurNode->children[index];
-		}
-		return true;
-	}
-
-	TrieNode* m_pRoot;
-};
 
 
 enum enVertex {A,B,C,D,E,F,G,H,I,J,K};
 
 int main() 
 {
-	Trie* obj = new Trie();
-	obj->insert("apple");
-	obj->insert("applee");
-	obj->insert("appler");
-	bool param_2 = obj->search("app");
-	bool param_3 = obj->startsWith("a");
+	STrie::Trie trie;
+
+	trie.Insert("APPLE");
+	trie.Insert("AXIS");
+	trie.Insert("APP");
+	trie.Insert("APPEND");
+	trie.Insert("KKLMG");
+	trie.Insert("MESSI");
+
+	int count = trie.size();
+	bool find0 = trie.Search("APPLE");
+
+	trie.Remove("APPLE");
+	trie.Remove("KING");
+	trie.Remove("AXIS");
+
+	int count2 = trie.size();
+	bool find1= trie.Search("APPLE");
 
 
 	getchar();

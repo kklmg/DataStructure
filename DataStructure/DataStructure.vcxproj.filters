@@ -37,6 +37,9 @@
     <Filter Include="algorithm">
       <UniqueIdentifier>{1061e1c6-218c-4eac-9bd2-d7bf9b189a66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DS\Trie">
+      <UniqueIdentifier>{297f1451-6ea4-4e71-9013-0e56a831ebf7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -78,6 +81,9 @@
     <ClInclude Include="Sort.h">
       <Filter>algorithm</Filter>
     </ClInclude>
+    <ClInclude Include="Trie.h">
+      <Filter>DS\Trie</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -90,5 +96,8 @@
       <Filter>DS\Hash</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Trie.cpp">
+      <Filter>DS\Trie</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
